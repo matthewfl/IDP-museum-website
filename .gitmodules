@@ -1,0 +1,9 @@
+[submodule "lib/nstore"]
+	path = lib/nstore
+	url = https://github.com/creationix/nstore.git
+[submodule "lib/socket.io"]
+	path = lib/socket.io
+	url = https://github.com/LearnBoost/Socket.IO-node.git
+[submodule "static/less"]
+	path = static/less
+	url = https://github.com/cloudhead/less.js.git
