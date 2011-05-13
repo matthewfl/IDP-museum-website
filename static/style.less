@@ -1,3 +1,50 @@
+//@import "960.less";
+
+@backcolor: #ff0000;
+@linkcolor: #000000;
+@linkspace: #ffffff;
+
 body {
-     background: #ff0000;
+     background: @backcolor;
+}
+
+#nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    background: @linkcolor;
+    li {
+	float: left;
+	a {
+	    margin-top: 5px;
+	    width: 100px;
+	    text-align: center;
+	    border-right: @linkspace solid 5px;
+	    display: block;
+	    height: 25px;
+	    &.last {
+		border-right: none;
+	    }
+	}
+    }
+    ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+    }
+}
+
+#header {
+    position: relative;
+    top: 45px;
+    text-align: center;
+}
+
+#content {
+    position: relative;
+    top: 25px;
 }
