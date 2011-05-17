@@ -1,21 +1,46 @@
 //@import "960.less";
+//@import "jquery-mobile.less";
 
 @backcolor: #ff0000;
 @linkcolor: #000000;
 @linkspace: #ffffff;
 
 body {
-     background: @backcolor;
+    // placed here for when the tablet is updating
+    //background: url(/static/images/LA.jpg) -240px 0px repeat;
+background: #000000;
 }
 
-#nav {
+#base {
+    // this is here to be the only thing that is need to be moved when scolling on tablets
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 30px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(/static/images/LA-Sepia.jpg) -240px 32px;
+    background-attachment: fixed;
+    z-index: -100;
+}
+
+#nav {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
     overflow: hidden;
     background: @linkcolor;
+    z-index: 1000;
     li {
 	float: left;
 	a {
@@ -42,9 +67,17 @@ body {
     position: relative;
     top: 45px;
     text-align: center;
+    z-index: 0;
 }
 
 #content {
     position: relative;
-    top: 25px;
+    top: 80px;
+    overflow:visible;
+    height: 90%;
+}
+
+#random {
+    position: relative;
+    top: 2000px;
 }
