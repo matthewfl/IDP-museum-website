@@ -4,6 +4,7 @@ var io = require('./lib/socket.io');
 var socket = io.listen(server.getRaw());
 
 server.get('/', router.staticHandler('./pages/index.html'));
+
 server.get('/ping', function (req, res) {
     socket.broadcast("test");
     return "sent";

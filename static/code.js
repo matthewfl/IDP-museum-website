@@ -12,7 +12,7 @@ socket.on('disconnect', function () {
     $("body").append("<p>lost</p>");
 });
 socket.on('message', function (data) {
-    alert(data);
+   // alert(data);
 });
 $(function () {
     socket.connect();
@@ -24,19 +24,23 @@ $(function () {
     $("a").live('click', function () { 
 	var href = $(this).attr("href");
 	if(/http/.exec(href)) { alert("This open external web page: "+href); return false; }
-	$("#content").load(href);
-	$(document).scrollTop(0);
+	$("#contentParent").load(href + " #content");
+	var background = /pages\/.*\.html/.exec(href) ? href.replace(/\/pages\/(.*)\.html/, "/static/backgrounds/$1.jpg") : "/static/backgrounds/default.jpg";
+	$("#background").css("background", 'url("'+background+'") fixed -240px 32px');
+	$(document).scrollTop(0);2
 	return false;
     });
 
-//    if($(window).height()*$(window).width() > 400000)	tablet = false;
+    if($(window).height()*$(window).width() > 400000)	tablet = false;
 
     if(tablet) {
-	alert("tablet");
+//	alert("tablet");
 	var base_scroll = $("#base").css("position", "absolute");
 	$(window).scroll(function () {
 	    base_scroll.css("top", document.body.scrollTop);
 	});
 	$(document).scrollTop(0);
+    }else{
+	$("#background").css("background", 'url("/static/backgrounds/default.jpg") 0px -32px');
     }
 });

@@ -1,8 +1,30 @@
 <html>
   <head>
     <title>IDP Land website</title>
+    <link rel="stylesheet/less" type="text/css" href="/static/style.less" />
     <script src="/static/jquery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/static/less/dist/less-1.0.44.js"></script>
+    <script src="/static/code.js"></script>
   </head>
   <body>
+    <div id="base">
+      <div id="nav" data-position="fixed">
+	<ul>
+	  <li><a href="/pages/sample.html">sample page 1</a></li>
+	  <li><a href="/random2">link 2</a></li>
+	  <li><a class="last" href="/random3">link 3</a></li>
+	</ul>
+      </div>
+      <div id="background"> </div>
+    </div>
+    <div id="header">
+      <!-- let us put a picutre here with something color full -->
+      <h1>Land In Southern California</h1>
+    </div>
+    <div id="content">
+      <p>This is where the content will go</p>
+      <div id="random">trolled</div>
+    </div>
   </body>
 </html>
