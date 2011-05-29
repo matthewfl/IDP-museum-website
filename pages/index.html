@@ -10,10 +10,23 @@
   <body>
     <div id="base">
       <div id="nav">
+	<img src="/static/icons/LinkBar.png" width="480" height="30" usemap="#linkMap">
+	<map name="linkMap">
+	  <area shape="rect" coords="0,0,55,30" onclick="link('/');" href="#/" alt="Home" />
+	  <area shape="rect" coords="55,0,165,30" onclick="link('/pages/HumanImpact.html');" href="#/pages/HumanImpact.html" alt="Human Impact" />
+	  <area shape="rect" coords="165,0,250,30" onclick="link('/pages/LandUse.html');" href="#/pages/LandUse.html" alt="Land Use" />
+	  <area shape="rect" coords="250,0,375,30" onclick="link('/pages/NaturalD.html');" href="#/pages/NaturalD.html" alt="Natural Disasters" />
+	  <area shape="rect" coords="375,0,480,30" onclick="link('/pages/Deforestation.html');" href="#/pages/Deforestation.html" alt="Deforestation" />
+	</map>
+	<!--
 	<ul>
 	  <li><a href="/">Home</a></li>
-	  <li><a href="/pages/Altenergy.html">Alternate Energy</a></li>
+	  <li><a href="/pages/HumanImpact.html">Human Impact</a></li>
+	  <li><a href="/pages/LandUse.html">Land Use</a></li>
+	  <li><a href="/pages/NaturalD.html">Natural Disasters</a></li>
 	  <li><a href="/pages/Deforestation.html"><img src="/static/icons/Deforestation.png"></a></li>
+	  <!--
+	  <li><a href="/pages/Altenergy.html">Alternate Energy</a></li>
 	  <li><a href="/pages/Urbanization.html">Urbanization</a></li>
 	  <li><a href="/pages/NatualD.html">Natural Disasters</a></li>
 	  <li><a href="/pages/Recycling.html">Recycling</a></li>
@@ -23,17 +36,17 @@
 	  <li><a href="/pages/sample.html">sample page 1</a></li>
 	  <li><a href="/random2">link 2</a></li>
 	  <li><a class="last" href="/random3">link 3</a></li>
-	  -->
 	</ul>
+	-->
       </div>
       <div id="background"> </div>
     </div>
-    <div id="header">
-      <!-- let us put a picutre here with something color full -->
-      <center><img src="/static/icons/LandInSoCal.png"></center>
-    </div>
     <div id="contentParent">
       <div id="content">
+	<div id="header">
+	  <!-- let us put a picutre here with something color full -->
+	  <center><img src="/static/icons/LandInSoCal.png"></center>
+	</div>
 	<p>This is where the content will go</p>
 	<div id="random">trolled</div>
       </div>
