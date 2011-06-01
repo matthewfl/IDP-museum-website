@@ -45,7 +45,7 @@ $(function () {
 	$(document).scrollTop(0);
     }else{
 	$("#background").css("background", 'url("/static/backgrounds/default.jpg") 0px -32px');
-	$("#nav").css("background", '#404040');
+	//$("#nav").css("background", '#404040');
     }
 });
 
