@@ -1,0 +1,18 @@
+[
+/*    [
+	"the question",
+	1, // index of answer
+	"answer 1",
+	"answer 2",
+	// ...
+	
+    ],	*/
+    [
+	"trolled",
+	2,
+	"wrong",
+	"wrong",
+	"right",
+	"wrong"
+    ]
+]

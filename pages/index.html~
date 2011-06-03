@@ -1,30 +1,35 @@
 <html>
   <head>
-    <title>IDP Land website</title>
+    <title>Terradise</title>
     <link rel="stylesheet/less" type="text/css" href="/static/style.less" />
+    <script src="/static/less/dist/less-1.0.44.js"></script>
     <script src="/static/jquery.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="/static/less/dist/less-1.0.44.js"></script>
+    <script src="/static/facebox/facebox.js"></script>
     <script src="/static/code.js"></script>
   </head>
   <body>
     <div id="base">
-      <div id="nav" data-position="fixed">
-	<ul>
-	  <li><a href="/pages/sample.html">sample page 1</a></li>
-	  <li><a href="/random2">link 2</a></li>
-	  <li><a class="last" href="/random3">link 3</a></li>
-	</ul>
+      <div id="nav">
+	<img src="/static/icons/LinkBar.png" width="480" height="30" usemap="#linkMap">
+	<map name="linkMap">
+	  <area shape="rect" coords="0,0,55,30" onclick="link('/');" href="#/" alt="Home" />
+	  <area shape="rect" coords="55,0,165,30" onclick="link('/pages/HumanImpact.html');" href="#/pages/HumanImpact.html" alt="Human Impact" />
+	  <area shape="rect" coords="165,0,250,30" onclick="link('/pages/LandUse.html');" href="#/pages/LandUse.html" alt="Land Use" />
+	  <area shape="rect" coords="250,0,375,30" onclick="link('/pages/NaturalD.html');" href="#/pages/NaturalD.html" alt="Natural Disasters" />
+	  <area shape="rect" coords="375,0,480,30" onclick="link('/pages/Deforestation.html');" href="#/pages/Deforestation.html" alt="Deforestation" />
+	</map>
       </div>
       <div id="background"> </div>
     </div>
-    <div id="header">
-      <!-- let us put a picutre here with something color full -->
-      <h1>Land In Southern California</h1>
-    </div>
-    <div id="content">
-      <p>This is where the content will go</p>
-      <div id="random">trolled</div>
+    <div id="contentParent">
+      <div id="content">
+	<div id="header">
+	  <center><img src="/static/icons/LandInSoCal.png"></center>
+	</div>
+	<p>Welcome to the Terradise Website.  We invite you to explore our online interactive Museum with aditional links and resources.  You will find infomation that was unable to fund it way onto the walls, as well as different perspectives of infomration all ready persented.  </p>
+	<!--<div id="random"> </div> <!--  take this out -->
+      </div>
     </div>
   </body>
 </html>
